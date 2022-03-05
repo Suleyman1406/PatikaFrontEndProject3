@@ -47,6 +47,7 @@ const THead = styled.th`
   border: none;
   padding: 15px 5px;
   font-weight: 700;
+  transition: 0.5s all;
   &:hover {
     background-color: rgba(75, 99, 110, 0.4);
     cursor: pointer;
@@ -61,8 +62,9 @@ const THead = styled.th`
   @media only screen and (max-width: 350px) {
     display: ${({ isRank }) => (isRank ? "none" : "")};
   }
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-width: 400px) {
     padding: 8px 3px;
+    font-size: 14px;
   }
 `;
 
@@ -71,14 +73,16 @@ const TData = styled.td`
   padding: 15px 5px;
   margin: 0 10px;
   font-weight: 500;
+  transition: 0.5s all;
   @media only screen and (max-width: 800px) {
     display: ${({ isCap }) => (isCap ? "none" : "")};
   }
   @media only screen and (max-width: 500px) {
     display: ${({ isChange }) => (isChange ? "none" : "")};
   }
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-width: 400px) {
     display: ${({ isRank }) => (isRank ? "none" : "")};
+    font-size: 13px;
   }
 `;
 
@@ -86,6 +90,11 @@ const CyrptoImage = styled.img`
   width: 30px;
   display: inline-block;
   transform: translateY(9px);
+  transition: 0.5s all;
+  @media only screen and (max-width: 400px) {
+    width: 20px;
+    transform: translateY(5px);
+  }
 `;
 
 const Icon = css`

@@ -39,6 +39,10 @@ const Button = styled.button`
     margin: 0 5px;
     font-size: 13px;
   }
+  @media only screen and (max-width: 400px) {
+    padding: 7px 7px;
+    font-size: 12px;
+  }
 `;
 
 const Count = styled.h3`
@@ -46,6 +50,9 @@ const Count = styled.h3`
   font-size: 14px;
   @media only screen and (max-width: 500px) {
     font-size: 12px;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 11px;
   }
 `;
 const PageChanger = () => {
