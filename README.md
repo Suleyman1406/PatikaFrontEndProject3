@@ -1,4 +1,4 @@
-# Dada Crypto Application
+# Dada Crypto Tracker Application
 
 ## In this React application, we will be able to track the price of cryptocurrency finance and search for the cryptocurrency we want.
 
