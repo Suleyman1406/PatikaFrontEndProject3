@@ -56,9 +56,13 @@ const THead = styled.th`
   }
   @media only screen and (max-width: 500px) {
     display: ${({ isChange }) => (isChange ? "none" : "")};
+    padding: 10px 5px;
   }
   @media only screen and (max-width: 350px) {
     display: ${({ isRank }) => (isRank ? "none" : "")};
+  }
+  @media only screen and (max-width: 350px) {
+    padding: 8px 3px;
   }
 `;
 
@@ -196,7 +200,7 @@ const CyrptoList = () => {
             </THead>
             <THead onClick={sortByPrice}>Price</THead>
             <THead isChange={true} onClick={sortByPriceChange}>
-              Price Change (%)
+              Price Change
             </THead>
             <THead isCap={true} onClick={sortByMarketCap}>
               Market Cap
@@ -220,7 +224,7 @@ const CyrptoList = () => {
                 {"  " + item.name}
               </TData>
               <TData style={{ width: "25%", color: "rgba(255,204,0)" }}>
-                {item.current_price + " $"}
+                {"$" + item.current_price}
               </TData>
               <TData
                 isChange={true}
@@ -234,7 +238,7 @@ const CyrptoList = () => {
               >
                 {(
                   Math.round(item.price_change_percentage_24h * 10000) / 10000
-                ).toFixed(4)}
+                ).toFixed(4) + "%"}
                 {item.price_change_percentage_24h > 0 ? (
                   <UpIcon />
                 ) : (
@@ -245,7 +249,7 @@ const CyrptoList = () => {
                 isCap={true}
                 style={{ width: "25%", color: "rgba(190,190,190)" }}
               >
-                {item.market_cap}
+                {"$" + item.market_cap}
               </TData>
             </Tr>
           ))}

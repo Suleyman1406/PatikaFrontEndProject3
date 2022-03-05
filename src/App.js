@@ -18,6 +18,9 @@ const Container = styled.div`
   @media only screen and (max-width: 450px) {
     padding: 30px 0;
   }
+  @media only screen and (max-width: 350px) {
+    padding: 10px 0;
+  }
 `;
 const CryptoCard = styled.div`
   width: 60%;
