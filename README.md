@@ -9,6 +9,7 @@
 ### [Application link (click me)](https://dadacrypto.netlify.app/)
 
 ---
-
-<img src="public/images/appImage1.png" width="49%" float="left">
-<img src="public/images/appImage2.png" width="49%" float="left">
+<p float="left">
+<img src="public/images/appImage1.png" width="49%" />
+<img src="public/images/appImage2.png" width="49%" />
+</p>
