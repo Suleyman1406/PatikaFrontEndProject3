@@ -59,12 +59,13 @@ const THead = styled.th`
     display: ${({ isChange }) => (isChange ? "none" : "")};
     padding: 10px 5px;
   }
-  @media only screen and (max-width: 350px) {
-    display: ${({ isRank }) => (isRank ? "none" : "")};
-  }
+
   @media only screen and (max-width: 400px) {
     padding: 8px 3px;
     font-size: 14px;
+  }
+  @media only screen and (max-width: 350px) {
+    display: ${({ isRank }) => (isRank ? "none" : "")};
   }
 `;
 
@@ -80,7 +81,7 @@ const TData = styled.td`
   @media only screen and (max-width: 500px) {
     display: ${({ isChange }) => (isChange ? "none" : "")};
   }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 350px) {
     display: ${({ isRank }) => (isRank ? "none" : "")};
     font-size: 13px;
   }
