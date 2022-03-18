@@ -1,10 +1,6 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 import styled from "styled-components";
-import { getCyrptoList } from "../redux/CyrptoSlice";
 
-const Container = styled.div`
+export const Container = styled.div`
   width: 100%;
   height: 100px;
   box-sizing: border-box;
@@ -17,7 +13,7 @@ const Container = styled.div`
     padding: 15px 10px;
   }
 `;
-const Button = styled.button`
+export const Button = styled.button`
   padding: 10px 15px;
   border: none;
   border-radius: 10px;
@@ -45,7 +41,7 @@ const Button = styled.button`
   }
 `;
 
-const Count = styled.h3`
+export const Count = styled.h3`
   cursor: default;
   font-size: 14px;
   @media only screen and (max-width: 500px) {
@@ -55,27 +51,3 @@ const Count = styled.h3`
     font-size: 11px;
   }
 `;
-const PageChanger = () => {
-  const page = useSelector((state) => state.cyrpto.page);
-  const dispatch = useDispatch();
-
-  const toPrevious = () => {
-    dispatch(getCyrptoList(page - 1));
-  };
-  const toNext = () => {
-    dispatch(getCyrptoList(page + 1));
-  };
-  return (
-    <Container>
-      <Button disabled={page === 1} onClick={toPrevious}>
-        🡠 Previous Page
-      </Button>
-      <Count>Page {page}</Count>
-      <Button disabled={page === 100} onClick={toNext}>
-        Next Page 🡢
-      </Button>
-    </Container>
-  );
-};
-
-export default PageChanger;

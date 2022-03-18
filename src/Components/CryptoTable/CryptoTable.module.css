@@ -1,0 +1,45 @@
+.icon {
+  font-size: 20px;
+  transform: translateY(4px);
+}
+
+.table_head {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
+.table_head:hover {
+  background-color: white !important;
+}
+
+.image {
+  width: 15%;
+  text-align: left !important;
+  transform: translateY(-7px);
+}
+
+.market_cap_rank {
+  width: 10%;
+  font-weight: 800;
+}
+
+.price {
+  width: 25%;
+  color: rgba(255, 204, 0);
+}
+
+.price_change_up {
+  width: 25%;
+  color: rgb(75, 181, 67);
+}
+
+.price_change_down {
+  width: 25%;
+  color: rgb(255, 51, 51);
+}
+
+.market_cap {
+  width: 25%;
+  color: rgba(190, 190, 190);
+}

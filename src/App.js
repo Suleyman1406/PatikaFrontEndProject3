@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import CyrptoList from "./Components/CyrptoList";
-import Footer from "./Components/Footer";
-import PageChanger from "./Components/PageChanger";
-import Search from "./Components/Search";
+import CyrptoList from "./Components/CryptoTable/CryptoTable";
+import Footer from "./Components/Footer/Footer";
+import PageChanger from "./Components/PageChanger/PageChanger";
+import Search from "./Components/Search/Search";
 
 const Container = styled.div`
   background-image: url("images/backgroundImage.jpg");

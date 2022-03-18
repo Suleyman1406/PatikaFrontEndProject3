@@ -1,10 +1,7 @@
-import React from "react";
 import styled from "styled-components";
 import { FaSearchDollar } from "react-icons/fa";
-import { useDispatch } from "react-redux";
-import { setSearch } from "../redux/CyrptoSlice";
-import { useSelector } from "react-redux";
-const Container = styled.div`
+
+export const Container = styled.div`
   width: 100%;
   display: flex;
   @media only screen and (max-width: 750px) {
@@ -13,7 +10,7 @@ const Container = styled.div`
   }
 `;
 
-const Header = styled.h2`
+export const Header = styled.h2`
   margin: 0;
   padding: 10px 0;
   font-weight: 700;
@@ -24,7 +21,7 @@ const Header = styled.h2`
   }
 `;
 
-const InputContainer = styled.div`
+export const InputContainer = styled.div`
   width: 200px;
   display: inline-block;
   width: fit-content;
@@ -49,7 +46,7 @@ const InputContainer = styled.div`
   }
 `;
 
-const SearchInput = styled.input`
+export const SearchInput = styled.input`
   width: 100%;
   display: inline-block;
   padding: 10px 15px;
@@ -67,7 +64,7 @@ const SearchInput = styled.input`
   }
 `;
 
-const SearchIcon = styled(FaSearchDollar)`
+export const SearchIcon = styled(FaSearchDollar)`
   position: absolute;
   right: -25px;
   top: 3px;
@@ -77,32 +74,4 @@ const SearchIcon = styled(FaSearchDollar)`
   padding: 4px;
   transition: 0.2s all;
   color: rgba(0, 0, 0, 0.8);
-  &:hover {
-    color: rgba(0, 0, 0, 1);
-    background-color: rgba(220, 220, 220);
-    cursor: pointer;
-  }
 `;
-
-const Search = () => {
-  const dispatch = useDispatch();
-  const search = useSelector((state) => state.cyrpto.search);
-  const changeSearch = (value) => {
-    dispatch(setSearch(value));
-  };
-  return (
-    <Container className="clearfix">
-      <Header>Cyrpto Tracker Application</Header>
-      <InputContainer>
-        <SearchInput
-          onChange={(e) => changeSearch(e.target.value)}
-          value={search}
-          placeholder="Search by cyrpto name"
-        />
-        <SearchIcon />
-      </InputContainer>
-    </Container>
-  );
-};
-
-export default Search;
