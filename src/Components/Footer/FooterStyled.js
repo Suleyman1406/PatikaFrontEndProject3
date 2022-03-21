@@ -4,6 +4,7 @@ export const Container = styled.div`
   width: 100%;
   background-color: rgba(207, 216, 220, 0.6);
   padding: 5px 0px 30px;
+  margin-top: auto;
   @media only screen and (max-width: 1100px) {
     padding: 5px 0px 20px;
   }
